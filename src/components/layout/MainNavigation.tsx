@@ -18,7 +18,7 @@ interface MainNavigationProps {
     items?: MainNavItem[];
 }
 
-export default function MainNavigation({items}: MainNavigationProps) {
+export default function MainNavigation({ items }: MainNavigationProps) {
     return (
         <div className="hidden gap-6 lg:flex">
             <Link to="/" className="space-x-2 flex items-center">
