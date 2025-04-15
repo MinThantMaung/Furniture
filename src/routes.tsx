@@ -1,7 +1,10 @@
 import {createBrowserRouter} from "react-router-dom";
 import Home from './pages/Home';
-import Contact from './pages/Contact';
+import About from './pages/About';
+import BlogDetails from './pages/blogs/BlogDetails';
+import Blog from './pages/blogs/Blog';
 import RootLayout from './pages/RootLayout';
+import BlogRootLayout from "./pages/blogs/BlogRootLayout";
 import Error from './pages/Error';
 
 export const router = createBrowserRouter([
@@ -11,7 +14,12 @@ export const router = createBrowserRouter([
         errorElement: <Error />,
         children: [
             {index: true, element: <Home />},
-            {path: "contact",element: <Contact /> }
+            {path: "about",element: <About /> },
+            {path: "blogs",element: <BlogRootLayout /> ,children:[
+                {index: true,element: <Blog />},
+                {path: ":postId",element: <BlogDetails /> }
+            ]},
+            
         ]
     },
 ]);

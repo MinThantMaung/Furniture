@@ -59,8 +59,8 @@ export default function MainNavigation({ items }: MainNavigationProps) {
                         </NavigationMenuItem>
                     )}
                     {items?.[0]?.menu && items[0].menu.map((item) => (
-                        <NavigationMenuItem>
-                            <Link to={String(item.href)}>
+                        <NavigationMenuItem key={item.title}>
+                            <Link to={item.href}>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                                     {item.title}
                                 </NavigationMenuLink>

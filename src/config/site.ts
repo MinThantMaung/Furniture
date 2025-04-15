@@ -28,7 +28,7 @@ export const siteConfig = {
                 },
                 {
                     title: 'Blog',
-                    href: '/blog',
+                    href: '/blogs',
                 },
                 {
                     title: 'About Us',

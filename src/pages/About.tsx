@@ -1,4 +1,4 @@
-function Contact(){
+function About(){
     return (
         <div>
             Contact
@@ -6,4 +6,4 @@ function Contact(){
     );
 };
 
-export default Contact;
+export default About;
