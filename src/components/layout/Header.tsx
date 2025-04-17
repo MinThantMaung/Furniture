@@ -5,7 +5,7 @@ import { ModeToggle } from "../mode-toggle.tsx";
 
 function Header() {
   return (
-    <header className="w-full border-b">
+    <header className="w-full border-b fixed top-0 z-50 bg-background">
       <nav className="container mx-auto flex items-center h-16">
         <MainNavigation items={siteConfig.mainNav} />
         <MobileNavigation items={siteConfig.mainNav} />

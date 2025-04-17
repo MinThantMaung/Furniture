@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import {
     Sheet,
     SheetClose,
-    SheetContent,
+    SheetContent, SheetTitle,
     SheetTrigger,
 } from "../ui/sheet.tsx"
 import {
@@ -39,7 +39,6 @@ function MobileNavigation({items}: MainNavigationProps) {
         return null;
     }
 
-
     return (
         <div className="lg:hidden">
             <Sheet>
@@ -50,6 +49,7 @@ function MobileNavigation({items}: MainNavigationProps) {
                     </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="pt-9 px-4">
+                    <SheetTitle className="sr-only">{siteConfig.name}</SheetTitle>
                     <SheetClose asChild>
                         <Link to="/" className="flex items-center">
                             <Icons.logo className="size-4 mr-2" aria-hidden="true"/>

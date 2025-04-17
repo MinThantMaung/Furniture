@@ -18,7 +18,7 @@ interface MainNavigationProps {
     items?: MainNavItem[];
 }
 
-export default function MainNavigation({ items }: MainNavigationProps) {
+export default function MainNavigation({items}: MainNavigationProps) {
     return (
         <div className="hidden gap-6 lg:flex">
             <Link to="/" className="space-x-2 flex items-center">
@@ -60,11 +60,11 @@ export default function MainNavigation({ items }: MainNavigationProps) {
                     )}
                     {items?.[0]?.menu && items[0].menu.map((item) => (
                         <NavigationMenuItem key={item.title}>
-                            <Link to={item.href}>
-                                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            <NavigationMenuLink className={navigationMenuTriggerStyle()} asChild>
+                                <Link to={item.href}>
                                     {item.title}
-                                </NavigationMenuLink>
-                            </Link>
+                                </Link>
+                            </NavigationMenuLink>
                         </NavigationMenuItem>
                     ))}
 
