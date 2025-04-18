@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Header from "../components/layout/Header";
+import Header from "../components/layouts/Header";
 import { Button } from "../components/ui/button";
 import {
   Card,
@@ -8,7 +8,7 @@ import {
   CardHeader,
   CardTitle,
 } from "../components/ui/card";
-import Footer from "../components/layout/Footer.tsx";
+import Footer from "../components/layouts/Footer.tsx";
 import { Icons } from "../components/icons";
 
 function Error() {
