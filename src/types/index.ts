@@ -31,6 +31,6 @@ export type Post = {
     content: string,
     image: string,
     body: string,
-    update_at: string,
+    updated_at: string,
     tags: string[]
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import { Post } from "../../types";
 import { Link } from "react-router-dom";
 
@@ -20,7 +19,7 @@ function blogCard({ posts }: PostProps) {
           <div className="ml-4 mt-2 text-sm">
             <span className="">
               by <span className="font-semibold">{post.author}</span> on
-              <span className="font-semibold"> {post.update_at}</span>
+              <span className="font-semibold"> {post.updated_at}</span>
             </span>
           </div>
         </Link>

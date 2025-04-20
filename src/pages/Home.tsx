@@ -5,8 +5,10 @@ import CarouselCard from "../components/products/CarouselCard.tsx";
 import { products } from "../data/product.ts";
 import { posts } from "../data/posts.ts";
 import BlogCard from "../components/blogs/blogCard.tsx";
+import ProductCard from "../components/products/ProductCard.tsx";
 
 const samplePosts = posts.slice(0,3)
+const sampleProducts = products.slice(0,4)
 
 function Home() {
   const Title = ({
@@ -57,6 +59,12 @@ function Home() {
         <img src={Couch} alt="Couch" className="w-full lg:w-3/5" />
       </div>
       <CarouselCard products={products} />
+      <Title title="Featured Products" href="/products" sideText="View All Products" />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4 md:px-0 gap-6">
+        {sampleProducts.map((product) => (
+            <ProductCard product={product} key={product.id} />
+        ))}
+      </div>
       <Title title="Recent Blog" href="/blogs" sideText="View All Posts" />
       <BlogCard posts={samplePosts}/>
     </div>
