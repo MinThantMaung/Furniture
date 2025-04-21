@@ -9,15 +9,15 @@ import {Button} from "../ui/button.tsx";
 import {Link} from "react-router-dom";
 import {AspectRatio} from "../ui/aspect-ratio.tsx";
 import {Icons} from "../icons.tsx";
-import {formatPrice} from "../../lib/utils.ts";
+import {formatPrice, cn} from "../../lib/utils.ts";
 
-interface ProductProps {
+interface ProductProps extends React.HTMLAttributes<HTMLDivElement> {
     product: Product;
 }
 
-function ProductCard({product}: ProductProps) {
+function ProductCard({product, className}: ProductProps) {
     return (
-        <Card className="size-full overflow-hidden rounded-lg">
+        <Card className={cn("size-full overflow-hidden rounded-lg", className)}>
             <Link to={`/products/${product.id}`} aria-label={product.name}>
                 <CardHeader className="border-b p-0">
                     <AspectRatio ratio={1} className="bg-muted">
