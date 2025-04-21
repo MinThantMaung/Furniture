@@ -1,4 +1,3 @@
-import React from "react";
 import type { Post } from "../../types";
 import { Link } from "react-router-dom";
 
@@ -8,7 +7,7 @@ interface PostProps {
 
 function BlogPostList({ posts }: PostProps) {
   return (
-    <div className="grid grid-cols-1 gap-16 px-4 md:grid-cols-2 lg:grid-cols-3 md:px-0">
+    <div className="grid grid-cols-1 gap-16 px-4 md:grid-cols-2 lg:grid-cols-3 md:px-0 pb-6">
       {posts.map((post) => (
         <Link to={`/blogs/${post.id}`} key={post.id}>
           <img
@@ -21,7 +20,7 @@ function BlogPostList({ posts }: PostProps) {
           <div className="text-sm">
             <span className="">
               by <span className="font-[600]">{post.author}</span> on
-              <span className="font-[600]"> {post.update_at}</span>
+              <span className="font-[600]"> {post.updated_at}</span>
             </span>
           </div>
         </Link>

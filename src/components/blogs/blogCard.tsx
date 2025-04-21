@@ -7,7 +7,7 @@ interface PostProps {
 
 function blogCard({ posts }: PostProps) {
   return (
-    <div className="grid grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3 md:px-0">
+    <div className="grid grid-cols-1 gap-8 px-4 md:grid-cols-2 lg:grid-cols-3 md:px-0 pb-6">
       {posts.map((post) => (
         <Link to={`/blogs/${post.id}`} key={post.id}>
           <img
