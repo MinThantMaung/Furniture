@@ -135,7 +135,7 @@ export function ProductFilter({filterList}: FilterProps) {
             </FormItem>
           )}
         />
-        <Button type="submit" variant="outline">Submit</Button>
+        <Button type="submit" variant="outline">Filter</Button>
       </form>
     </Form>
   )
