@@ -2,19 +2,20 @@ import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-// import BlogDetails from './pages/blogs/BlogDetails';
-// import Blog from './pages/blogs/Blog';
-// import BlogRootLayout from "./pages/blogs/BlogRootLayout";
+
 import RootLayout from "./pages/RootLayout";
 import Error from "./pages/Error";
 import ProductRootLayout from "./pages/products/ProductRootLayout.tsx";
 import Product from "./pages/products/Product.tsx";
 import ProductDetail from "./pages/products/ProductDetail.tsx";
+import LoginPage from "./pages/auth/Login.tsx";
+import RegisterPage from "./pages/auth/Register.tsx";
 
 const BlogRootLayout = lazy(() => import("./pages/blogs/BlogRootLayout"));
 const Blog = lazy(() => import("./pages/blogs/Blog"));
 const BlogDetails = lazy(() => import("./pages/blogs/BlogDetails"));
 
+// eslint-disable-next-line react-refresh/only-export-components
 const SuspenseFallback = () => <div className="text-center">Loading...</div>;
 
 export const router = createBrowserRouter([
@@ -61,4 +62,10 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/login", element: <LoginPage />
+  },
+  {
+    path: "/register", element: <RegisterPage />
+  }
 ]);
